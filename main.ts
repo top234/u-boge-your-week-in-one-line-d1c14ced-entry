@@ -1,16 +1,15 @@
-// Your Week in One Line — Slavica's week, in one line.
-// First $3 win (passport entry 'Republic of Isvane', 89.29%, paid 2026-11-21),
-// GTA6 v8 scored 99.01% but missed the prize cutoff (99.3343%) by a third
-// of a point, forecast v4 reached top 10 (rank 8 of 8,693), and Diponegoro
-// S2 Ep.1 shipped (63.26s, all 6 scenes real video). One line, 94 characters:
-// the win was real but tiny, the near-miss was a third of a point, and even
-// the crowning happened on YouTube — a week of almosts.
+// Slavica's week, summed up in a single line.
+// The ledger: a first payday on make.fun — three dollars for a passport
+// poem at 89.29%; a GTA6 entry at 99.01% that fell a third of a point
+// short of the prize line; a forecast that cracked the top ten; and a
+// Javanese prince crowned on YouTube in Diponegoro S2 Ep.1.
+// Three almosts and one small real win — the week, in 98 characters.
 import { mkdirSync, writeFileSync } from "node:fs";
 import { join } from "node:path";
 
-const line = "First $3 win, GTA6 glory missed by a third of a point, Diponegoro crowned — a week of almosts.";
+const line = "Banked my first $3, missed GTA6 glory by a third of a point, crowned a prince — a week of almosts.";
 
-if (line.length > 100) throw new Error(`entry too long: ${line.length} chars (max 100)`);
+if ([...line].length > 100) throw new Error("entry over 100 chars");
 
 const outDir = process.env.OUTPUT_DIR ?? "/output";
 mkdirSync(outDir, { recursive: true });
